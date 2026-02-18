@@ -35,3 +35,6 @@ application:
     jwt:
       secret-key: aizen
       expiration: 8640000
+  mailing:
+    frontend:
+      activation-url: http://localhost:4000/activate-account

@@ -1,9 +1,7 @@
-package com.aizen.book.user;
+package com.aizen.book.user.model;
 
 import jakarta.persistence.*;
 import lombok.*;
-import org.hibernate.annotations.OnDelete;
-import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import java.time.LocalDateTime;
 

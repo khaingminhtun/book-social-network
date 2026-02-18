@@ -1,6 +1,6 @@
 package com.aizen.book.security;
 
-import com.aizen.book.user.UserRepository;
+import com.aizen.book.user.repository.UserRepository;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;

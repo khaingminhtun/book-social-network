@@ -1,6 +1,6 @@
-package com.aizen.book.user;
+package com.aizen.book.user.model;
 
-import com.aizen.book.role.Role;
+import com.aizen.book.role.model.Role;
 import jakarta.persistence.*;
 import lombok.*;
 import org.jspecify.annotations.Nullable;
@@ -96,7 +96,7 @@ public class User implements UserDetails, Principal {
         return email;
     }
 
-    private String fullName() {
+    public String fullName() {
         return firstname + " " + lastname;
     }
 }

@@ -1,5 +1,6 @@
-package com.aizen.book.user;
+package com.aizen.book.user.repository;
 
+import com.aizen.book.user.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;
