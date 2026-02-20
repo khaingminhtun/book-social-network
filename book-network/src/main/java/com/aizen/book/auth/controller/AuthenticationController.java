@@ -1,5 +1,7 @@
 package com.aizen.book.auth.controller;
 
+import com.aizen.book.auth.dto.AuthenticationRequest;
+import com.aizen.book.auth.dto.AuthenticationResponse;
 import com.aizen.book.auth.service.AuthenticationService;
 import com.aizen.book.auth.service.impl.AuthenticatonServiceImpl;
 import com.aizen.book.auth.dto.RegistrationRequest;
@@ -26,5 +28,21 @@ public class AuthenticationController {
     ) throws MessagingException {
         authenticationService.register(request);
         return ResponseEntity.accepted().build();
+    }
+
+
+    @GetMapping("/activate-account")
+    public void confirm(
+            @RequestParam String token
+    ) throws MessagingException {
+        authenticationService.activateAccount(token);
+    }
+
+
+    @PostMapping("/authenticate")
+    public ResponseEntity<AuthenticationResponse> authenticate(
+            @RequestBody @Valid AuthenticationRequest request
+    ){
+        return ResponseEntity.ok(authenticationService.authenticate(request));
     }
 }

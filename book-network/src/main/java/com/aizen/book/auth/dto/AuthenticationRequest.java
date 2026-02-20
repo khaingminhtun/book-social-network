@@ -2,22 +2,17 @@ package com.aizen.book.auth.dto;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Size;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-@Getter
-@Setter
+@Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class RegistrationRequest {
-
-    @NotBlank(message = "Firstname is mandatory")
-    private String firstname;
-
-    @NotBlank(message = "Lastname is mandatory")
-    private String lastname;
+public class AuthenticationRequest {
 
     @Email(message = "Email is not formatted")
     @NotBlank(message = "Email is mandatory")

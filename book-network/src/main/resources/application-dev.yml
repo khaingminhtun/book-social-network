@@ -33,8 +33,11 @@ spring:
 application:
   security:
     jwt:
-      secret-key: aizen
+      secret-key: S3toHqQ6fM11thpxViu+vxikmIcHxzTkgSVVC5NnmG8=
       expiration: 8640000
   mailing:
     frontend:
       activation-url: http://localhost:4000/activate-account
+
+server:
+  port: 8088
