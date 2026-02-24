@@ -1,6 +1,6 @@
-package com.aizen.book.role.model;
+package com.aizen.book.api.role.model;
 
-import com.aizen.book.user.model.User;
+import com.aizen.book.api.user.model.User;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;

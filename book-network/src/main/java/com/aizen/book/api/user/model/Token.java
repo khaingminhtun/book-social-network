@@ -1,4 +1,4 @@
-package com.aizen.book.user.model;
+package com.aizen.book.api.user.model;
 
 import jakarta.persistence.*;
 import lombok.*;

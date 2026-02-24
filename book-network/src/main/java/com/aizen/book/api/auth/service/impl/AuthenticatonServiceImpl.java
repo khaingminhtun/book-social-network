@@ -1,17 +1,17 @@
-package com.aizen.book.auth.service.impl;
+package com.aizen.book.api.auth.service.impl;
 
-import com.aizen.book.auth.dto.AuthenticationRequest;
-import com.aizen.book.auth.dto.AuthenticationResponse;
-import com.aizen.book.auth.dto.RegistrationRequest;
-import com.aizen.book.auth.service.AuthenticationService;
+import com.aizen.book.api.auth.dto.AuthenticationRequest;
+import com.aizen.book.api.auth.dto.AuthenticationResponse;
+import com.aizen.book.api.auth.dto.RegistrationRequest;
+import com.aizen.book.api.auth.service.AuthenticationService;
 import com.aizen.book.email.EmailService;
 import com.aizen.book.email.EmailTemplateName;
-import com.aizen.book.role.repository.RoleRepository;
+import com.aizen.book.api.role.repository.RoleRepository;
 import com.aizen.book.security.JwtService;
-import com.aizen.book.user.model.Token;
-import com.aizen.book.user.model.User;
-import com.aizen.book.user.repository.TokenRepository;
-import com.aizen.book.user.repository.UserRepository;
+import com.aizen.book.api.user.model.Token;
+import com.aizen.book.api.user.model.User;
+import com.aizen.book.api.user.repository.TokenRepository;
+import com.aizen.book.api.user.repository.UserRepository;
 import jakarta.mail.MessagingException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;

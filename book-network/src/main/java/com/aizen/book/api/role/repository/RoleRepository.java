@@ -1,6 +1,6 @@
-package com.aizen.book.role.repository;
+package com.aizen.book.api.role.repository;
 
-import com.aizen.book.role.model.Role;
+import com.aizen.book.api.role.model.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

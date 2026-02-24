@@ -1,7 +1,7 @@
 package com.aizen.book;
 
-import com.aizen.book.role.model.Role;
-import com.aizen.book.role.repository.RoleRepository;
+import com.aizen.book.api.role.model.Role;
+import com.aizen.book.api.role.repository.RoleRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -10,7 +10,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import org.springframework.scheduling.annotation.EnableAsync;
 
 @SpringBootApplication
-@EnableJpaAuditing
+@EnableJpaAuditing(auditorAwareRef = "auditorAware")
 @EnableAsync
 public class BookNetworkApiApplication {
 

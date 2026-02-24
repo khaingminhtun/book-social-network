@@ -1,4 +1,4 @@
-package com.aizen.book.auth.dto;
+package com.aizen.book.api.auth.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

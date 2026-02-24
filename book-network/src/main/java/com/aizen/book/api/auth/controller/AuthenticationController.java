@@ -1,10 +1,9 @@
-package com.aizen.book.auth.controller;
+package com.aizen.book.api.auth.controller;
 
-import com.aizen.book.auth.dto.AuthenticationRequest;
-import com.aizen.book.auth.dto.AuthenticationResponse;
-import com.aizen.book.auth.service.AuthenticationService;
-import com.aizen.book.auth.service.impl.AuthenticatonServiceImpl;
-import com.aizen.book.auth.dto.RegistrationRequest;
+import com.aizen.book.api.auth.dto.AuthenticationRequest;
+import com.aizen.book.api.auth.dto.AuthenticationResponse;
+import com.aizen.book.api.auth.service.AuthenticationService;
+import com.aizen.book.api.auth.dto.RegistrationRequest;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.mail.MessagingException;
 import jakarta.validation.Valid;

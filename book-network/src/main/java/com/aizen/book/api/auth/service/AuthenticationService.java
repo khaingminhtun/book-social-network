@@ -1,8 +1,8 @@
-package com.aizen.book.auth.service;
+package com.aizen.book.api.auth.service;
 
-import com.aizen.book.auth.dto.AuthenticationRequest;
-import com.aizen.book.auth.dto.AuthenticationResponse;
-import com.aizen.book.auth.dto.RegistrationRequest;
+import com.aizen.book.api.auth.dto.AuthenticationRequest;
+import com.aizen.book.api.auth.dto.AuthenticationResponse;
+import com.aizen.book.api.auth.dto.RegistrationRequest;
 import jakarta.mail.MessagingException;
 
 public interface AuthenticationService {
