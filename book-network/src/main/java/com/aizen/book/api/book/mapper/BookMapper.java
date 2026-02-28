@@ -2,7 +2,9 @@ package com.aizen.book.api.book.mapper;
 
 import com.aizen.book.api.book.dto.BookRequest;
 import com.aizen.book.api.book.dto.BookResponse;
+import com.aizen.book.api.book.dto.BorrowedBookResponse;
 import com.aizen.book.api.book.model.Book;
+import com.aizen.book.api.history.model.BookTransactionHistory;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -34,6 +36,16 @@ public class BookMapper {
                 .build();
     }
 
-
+    public BorrowedBookResponse toBorrowedBookResponse(BookTransactionHistory history){
+        return BorrowedBookResponse.builder()
+                .id(history.getBook().getId())
+                .title(history.getBook().getTitle())
+                .authorName(history.getBook().getAuthorName())
+                .isbn(history.getBook().getIsbn())
+                .rate(history.getBook().getRate())
+                .returned(history.isReturned())
+                .returnApproved(history.isReturnApproved())
+                .build();
+    }
 
 }

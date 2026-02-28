@@ -2,11 +2,10 @@ package com.aizen.book.api.book.service;
 
 import com.aizen.book.api.book.dto.BookRequest;
 import com.aizen.book.api.book.dto.BookResponse;
+import com.aizen.book.api.book.dto.BorrowedBookResponse;
+import com.aizen.book.api.book.service.impl.BookServiceImpl;
 import com.aizen.book.api.common.pagination.PageResponse;
-import com.aizen.book.api.user.model.User;
 import org.springframework.security.core.Authentication;
-
-import java.util.List;
 
 public interface BookService {
 
@@ -17,4 +16,20 @@ public interface BookService {
 
 
     PageResponse<BookResponse> findAllBooks(int page, int size, Authentication connectedUser);
+
+    PageResponse<BookResponse> findAllBooksByOwner(int page, int size, Authentication connectedUser);
+
+    PageResponse<BorrowedBookResponse> findAllBorrowedBooks(int page, int size, Authentication connectedUser);
+
+    PageResponse<BorrowedBookResponse> findAllReturnedBooks(int page, int size, Authentication connectedUser);
+
+    Integer updateShareableStatus(Integer bookId, Authentication connectedUser);
+
+    Integer updateArchivedStatus(Integer bookId, Authentication connectedUser);
+
+    Integer borrowBook(Integer bookId, Authentication connectedUser);
+
+    Integer returnBorrowedBook(Integer bookId, Authentication connectedUser);
+
+    Integer approveReturnBorrowedBook(Integer bookId, Authentication connectedUser);
 }
